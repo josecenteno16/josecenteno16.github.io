@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus Burger House | Hamburguesas de autor en Granada</title>
+<meta name="description" content="Hamburguesas de autor con ternera madurada, wagyu y trufa negra. Salón privado y reservas en Granada.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120a0c;--bg2:#1a0f12;--ivory:#f4ecdd;--gold:#c8a96a;--wine:#5a1a26;--mute:#a39688}
+body{background:var(--bg);color:var(--ivory);font-family:'Jost',sans-serif;font-weight:300;font-size:1.05rem;line-height:1.7;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Bodoni Moda',serif;font-weight:500}
+.gold{color:var(--gold)}
+.line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--wine),#1a0f12)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.dish:hover .ph img{transform:scale(1.07)}
+.dish{border:1px solid rgba(200,169,106,.22);background:var(--bg2);transition:border-color .3s,transform .3s}
+.dish:hover{border-color:var(--gold);transform:translateY(-4px)}
+.btn{display:inline-block;background:var(--gold);color:#1a0f12;font-weight:500;padding:.85rem 2rem;letter-spacing:.04em;transition:.3s;cursor:pointer;border:1px solid var(--gold)}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn2{display:inline-block;border:1px solid rgba(244,236,221,.5);padding:.85rem 2rem;letter-spacing:.04em;transition:.3s}
+.btn2:hover{border-color:var(--gold);color:var(--gold)}
+nav{transition:background .4s,padding .4s}
+nav.s{background:rgba(18,10,12,.92);backdrop-filter:blur(10px)}
+input,textarea{background:transparent;border:0;border-bottom:1px solid rgba(200,169,106,.4);padding:.7rem 0;width:100%;color:var(--ivory);outline:none}
+input:focus,textarea:focus{border-color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero-in{opacity:0;transform:translateY(20px);animation:hi 1.2s .2s ease-out forwards}
+@keyframes hi{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-in{animation:none;opacity:1;transform:none}.ph img{transition:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav" class="fixed top-0 inset-x-0 z-50 px-5 lg:px-12 py-5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="#inicio" class="serif text-2xl tracking-wide">Nexus <span class="gold italic">Burger House</span></a>
+    <div class="hidden md:flex gap-9 text-sm tracking-wide">
+      <a href="#carta" class="hover:text-[#c8a96a]">Carta</a>
+      <a href="#privado" class="hover:text-[#c8a96a]">Salón privado</a>
+      <a href="#dueno" class="hover:text-[#c8a96a]">El dueño</a>
+      <a href="#local" class="hover:text-[#c8a96a]">Dónde estamos</a>
+      <a href="#reservas" class="hover:text-[#c8a96a]">Reservas</a>
+    </div>
+    <button onclick="toggleCart()" class="border border-[#c8a96a]/60 px-4 py-2 text-sm hover:bg-[#c8a96a] hover:text-black transition" aria-label="Abrir pedido"><i class="fa-solid fa-bag-shopping mr-2"></i>Pedido <span id="cnt">0</span></button>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="inicio" class="ph min-h-screen flex items-end">
+  <img src="Wagyu%20Reserva.jfif" alt="Hamburguesa de autor de Nexus Burger House" onerror="this.remove()">
+  <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(18,10,12,.92) 15%,rgba(18,10,12,.45) 70%,rgba(18,10,12,.2)),linear-gradient(0deg,var(--bg),transparent 35%)"></div>
+  <div class="relative max-w-7xl mx-auto w-full px-5 lg:px-12 pb-24 pt-40 hero-in">
+    <h1 class="text-5xl sm:text-7xl leading-[1.05] max-w-3xl">La hamburguesa, <span class="italic gold">con categoría.</span></h1>
+    <p class="mt-6 max-w-xl text-lg text-[#d8cdbd]">Ternera madurada, wagyu, trufa negra e ibérico de bellota en pan brioche recién horneado. Alta cocina en formato hamburguesa y a un precio al que se puede volver cada semana.</p>
+    <div class="mt-9 flex flex-wrap gap-4">
+      <a href="#reservas" class="btn">Reservar mesa</a>
+      <a href="#carta" class="btn2">Ver la carta</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROMESAS -->
+<section class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-3 gap-10 text-center">
+  <div><div class="ph aspect-[4/3] mb-5"><img data-f="ternera" alt="Ternera madurada" loading="lazy"></div><i class="fa-solid fa-award gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Ternera madurada 30 días</h3><p class="text-[var(--mute)]">Carne seleccionada, picada cada mañana y cocinada a tu punto.</p></div>
+  <div><div class="ph aspect-[4/3] mb-5"><img data-f="brioche" alt="Pan brioche de horno propio" loading="lazy"></div><i class="fa-solid fa-wheat-awn gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Brioche de horno propio</h3><p class="text-[var(--mute)]">Mantequilla y huevo de corral. Tierno por dentro, dorado por fuera.</p></div>
+  <div><div class="ph aspect-[4/3] mb-5"><img data-f="lujo" alt="Experiencia de lujo en Nexus Burger House" loading="lazy"></div><i class="fa-solid fa-champagne-glasses gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Experiencia de lujo</h3><p class="text-[var(--mute)]">Servicio de mesa, vinos por copa y postres de autor.</p></div>
+</section>
+<div class="line max-w-4xl mx-auto"></div>
+
+<!-- CARTA -->
+<section id="carta" class="max-w-7xl mx-auto px-5 lg:px-12 py-24 scroll-mt-16">
+  <div class="max-w-2xl mb-14">
+    <h2 class="text-4xl sm:text-5xl">La carta</h2>
+    <p class="mt-4 text-[var(--mute)]">Seis hamburguesas de autor, todas con patatas caseras. Añade las que quieras y envía el pedido en un clic.</p>
+  </div>
+  <div id="menu" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+</section>
+
+<!-- SALÓN PRIVADO -->
+<section id="privado" class="bg-[var(--bg2)] scroll-mt-16">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2">
+    <div class="ph min-h-[360px]"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Salón del restaurante" loading="lazy" onerror="this.remove()"></div>
+    <div class="px-8 lg:px-16 py-16 flex flex-col justify-center">
+      <h2 class="text-4xl sm:text-5xl">Salón privado</h2>
+      <p class="mt-5 text-[#d8cdbd]">Un reservado con entrada independiente para quien prefiere cenar con total tranquilidad: artistas, deportistas, empresas y celebraciones de confianza.</p>
+      <ul class="mt-6 space-y-2 text-[var(--mute)]">
+        <li><i class="fa-solid fa-check gold mr-3"></i>Acceso discreto y mesa reservada</li>
+        <li><i class="fa-solid fa-check gold mr-3"></i>Menú degustación a medida</li>
+        <li><i class="fa-solid fa-check gold mr-3"></i>Capacidad para grupos y eventos</li>
+      </ul>
+      <div class="mt-9"><a href="tel:+34958123456" class="btn"><i class="fa-solid fa-phone mr-2"></i>Llamar al 958 12 34 56</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- DUEÑO -->
+<section id="dueno" class="max-w-6xl mx-auto px-5 lg:px-12 py-24 scroll-mt-16 grid md:grid-cols-5 gap-12 items-center">
+  <div class="md:col-span-2"><div class="ph aspect-[4/5] border border-[#c8a96a]/40"><img src="IMG_8726.jpeg" alt="Jose Centeno Santaella, fundador de Nexus Burger House" onerror="this.remove()"></div></div>
+  <div class="md:col-span-3">
+    <h2 class="text-4xl sm:text-5xl">Jose Centeno Santaella</h2>
+    <p class="gold italic serif text-xl mt-2">Fundador y propietario</p>
+    <p class="mt-6 text-[#d8cdbd]">Soy informático y estudio Administración de Sistemas Informáticos en Red. Nexus Burger House es mi forma de unir mis dos pasiones: la tecnología y la buena cocina. He digitalizado el restaurante de principio a fin para que cada hamburguesa salga con la misma precisión y cada cliente reciba un servicio impecable.</p>
+    <div class="grid sm:grid-cols-3 gap-6 mt-8">
+      <div><div class="ph aspect-[4/3] mb-4"><img data-f="robot-cocina" alt="Cocina robotizada" loading="lazy"></div><i class="fa-solid fa-robot gold text-xl mb-2"></i><h3 class="text-lg">Cocina robotizada</h3><p class="text-[var(--mute)] text-base">Robots programados por mí elaboran cada hamburguesa con la misma receta y el mismo punto, siempre.</p></div>
+      <div><div class="ph aspect-[4/3] mb-4"><img data-f="robot-servicio" alt="Servicio a mesa con robots" loading="lazy"></div><i class="fa-solid fa-bell-concierge gold text-xl mb-2"></i><h3 class="text-lg">Servicio con robots</h3><p class="text-[var(--mute)] text-base">Tu pedido llega a la mesa sin esperas ni errores.</p></div>
+      <div><div class="ph aspect-[4/3] mb-4"><img data-f="pago-online" alt="Pago online" loading="lazy"></div><i class="fa-solid fa-credit-card gold text-xl mb-2"></i><h3 class="text-lg">Pago online</h3><p class="text-[var(--mute)] text-base">Pagas desde el móvil, sin colas y sin esperar la cuenta.</p></div>
+    </div>
+    <p class="mt-8 text-[#d8cdbd]">Somos un equipo pequeño y cada persona hace lo que mejor sabe. Yo superviso, reviso y actualizo los robots y toda su mecanización. Otra persona recibe a los clientes, les indica su mesa y deja el salón perfecto, con las mesas y los cubiertos. Y otra se ocupa de que la vajilla esté impecable.</p>
+    <a href="mailto:josecenteno1616@gmail.com" class="inline-block mt-6 gold hover:underline"><i class="fa-solid fa-envelope mr-2"></i>josecenteno1616@gmail.com</a>
+  </div>
+</section>
+<div class="line max-w-4xl mx-auto"></div>
+
+<!-- LOCAL -->
+<section id="local" class="max-w-7xl mx-auto px-5 lg:px-12 py-24 scroll-mt-16 grid lg:grid-cols-2 gap-12">
+  <div>
+    <h2 class="text-4xl sm:text-5xl mb-8">Dónde estamos</h2>
+    <div class="space-y-7">
+      <div class="flex gap-5"><i class="fa-solid fa-location-dot gold text-xl mt-1"></i><div><h3 class="text-lg">Dirección</h3><p class="text-[var(--mute)]">C. Primavera, 26, Genil<br>18008 Granada</p></div></div>
+      <div class="flex gap-5"><i class="fa-solid fa-clock gold text-xl mt-1"></i><div><h3 class="text-lg">Horario</h3><p class="text-[var(--mute)]">Lunes a jueves: 13:00 a 23:30<br>Viernes y sábado: 13:00 a 01:00<br>Domingo: 13:00 a 23:00</p></div></div>
+      <div class="flex gap-5"><i class="fa-solid fa-phone gold text-xl mt-1"></i><div><h3 class="text-lg">Teléfono</h3><a href="tel:+34958123456" class="text-[var(--mute)] hover:text-[#c8a96a]">958 12 34 56</a></div></div>
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=C.+Primavera+26+Genil+18008+Granada" target="_blank" rel="noopener" class="btn2 mt-9">Abrir en Google Maps</a>
+  </div>
+  <div class="border border-[#c8a96a]/30 min-h-[340px]"><iframe title="Mapa de Nexus Burger House" class="w-full h-full min-h-[340px]" style="border:0;filter:invert(.9) hue-rotate(180deg) sepia(.25) saturate(.8)" loading="lazy" src="https://www.google.com/maps?q=C.+Primavera+26+Genil+18008+Granada&output=embed"></iframe></div>
+</section>
+
+<!-- RESERVAS -->
+<section id="reservas" class="bg-[var(--bg2)] scroll-mt-16">
+  <div class="max-w-3xl mx-auto px-5 py-24">
+    <h2 class="text-4xl sm:text-5xl text-center">Reserva tu mesa</h2>
+    <p class="text-center text-[var(--mute)] mt-3 mb-10">Te confirmamos por teléfono el mismo día.</p>
+    <form id="cf" class="grid sm:grid-cols-2 gap-x-8 gap-y-5">
+      <input id="rn" required placeholder="Nombre">
+      <input id="rt" required placeholder="Teléfono" type="tel">
+      <input id="rd" required type="date" aria-label="Fecha">
+      <input id="rp" required type="number" min="1" max="30" placeholder="Comensales">
+      <textarea id="rm" rows="3" placeholder="Comentarios (alergias, ocasión, salón privado)" class="sm:col-span-2"></textarea>
+      <button class="btn sm:col-span-2" type="submit">Solicitar reserva</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="text-center py-10 text-sm text-[var(--mute)]">
+  <p class="serif text-xl text-[var(--ivory)] mb-2">Nexus <span class="gold italic">Burger House</span></p>
+  <p>C. Primavera, 26, Genil, 18008 Granada · 958 12 34 56</p>
+  <p class="mt-1">© 2026 Jose Centeno Santaella</p>
+</footer>
+
+<aside id="cart" class="fixed top-0 right-0 h-full w-full sm:w-96 z-[60] p-7 flex flex-col translate-x-full transition-transform duration-300 border-l border-[#c8a96a]/30" style="background:#150c0e">
+  <div class="flex justify-between items-center mb-5"><h3 class="serif text-2xl">Tu pedido</h3><button onclick="toggleCart()" aria-label="Cerrar" class="text-3xl leading-none">&times;</button></div>
+  <div id="cl" class="flex-1 overflow-y-auto space-y-4"></div>
+  <div class="pt-5 border-t border-[#c8a96a]/30 space-y-4">
+    <p class="flex justify-between text-xl"><span>Total</span><span id="tot" class="gold serif"></span></p>
+    <input id="on" placeholder="Tu nombre" aria-label="Tu nombre">
+    <input id="ot" type="tel" placeholder="Teléfono" aria-label="Teléfono">
+    <input id="oa" placeholder="Dirección de entrega o número de mesa" aria-label="Dirección o mesa">
+    <button id="send" class="btn block text-center w-full">Enviar pedido</button>
+  </div>
+</aside>
+
+<script>
+const IMG=i=>encodeURI(i);
+const M=[
+{n:"Génesis",p:12.9,d:"Ternera madurada, cheddar curado, pepinillo y salsa de la casa.",i:"Génesis.jfif"},
+{n:"Wagyu Reserva",p:17.9,d:"Wagyu a la plancha, cebolla confitada y mayonesa ahumada.",i:"Wagyu Reserva.jfif"},
+{n:"Trufa Negra",p:15.9,d:"Ternera, crema de trufa negra, queso brie y rúcula.",i:"trufa.jpg.jfif"},
+{n:"Ibérica",p:14.9,d:"Ternera, jamón ibérico, tomate rallado y aceite de oliva virgen extra.",i:"iberica.jpg.jfif"},
+{n:"Alpujarra",p:14.5,d:"Ternera, queso de cabra gratinado, cebolla roja y mermelada de higos.",i:"Alpujarra.jfif"},
+{n:"Foie Royale",p:16.9,d:"Ternera, foie micuit, manzana caramelizada y reducción de Pedro Ximénez.",i:"Foie Royale.jfif"}];
+const C={},$=id=>document.getElementById(id),eur=n=>n.toFixed(2).replace(".",",")+" €";
+$("menu").innerHTML=M.map((b,k)=>`<article class="dish"><div class="ph aspect-[4/3]"><img src="${IMG(b.i)}" alt="Hamburguesa ${b.n}" loading="lazy" onerror="this.remove()"></div>
+<div class="p-6"><div class="flex justify-between items-baseline gap-3"><h3 class="text-2xl">${b.n}</h3><span class="gold serif text-xl">${eur(b.p)}</span></div>
+<p class="mt-2 text-[var(--mute)]">${b.d}</p><button onclick="add(${k})" class="btn2 mt-5 w-full text-center hover:bg-[#c8a96a] hover:text-black">Añadir al pedido</button></div></article>`).join("");
+function add(k,d=1){C[k]=Math.max(0,(C[k]||0)+d);upd();if(d>0)$("cnt").animate([{transform:"scale(1.7)"},{transform:"scale(1)"}],300)}
+function upd(){
+  const ks=Object.keys(C).filter(k=>C[k]>0);let tot=0,n=0,txt="";
+  $("cl").innerHTML=ks.length?ks.map(k=>{const b=M[k],q=C[k];tot+=b.p*q;n+=q;txt+=`${q} x ${b.n} (${eur(b.p*q)})\n`;
+  return `<div class="flex items-center justify-between gap-3"><span>${b.n}</span><span class="flex items-center gap-3"><button onclick="add(${k},-1)" class="w-7 h-7 border border-[#c8a96a]/50" aria-label="Quitar uno">-</button>${q}<button onclick="add(${k},1)" class="w-7 h-7 border border-[#c8a96a]/50" aria-label="Añadir uno">+</button></span></div>`}).join(""):`<p class="text-[var(--mute)]">Tu pedido está vacío. Elige una hamburguesa de la carta.</p>`;
+  $("cnt").textContent=n;$("tot").textContent=eur(tot);
+  window.ORD={t:txt,tot:eur(tot),n:n}}
+function toggleCart(){const c=$("cart");c.classList.toggle("translate-x-full");c.classList.toggle("translate-x-0")}
+const EP="https://formsubmit.co/ajax/josecenteno1616@gmail.com";
+async function send(data,btn,ok){const t=btn.textContent;btn.disabled=true;btn.textContent="Enviando...";
+try{const r=await fetch(EP,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({_template:"table",...data})});
+if(!r.ok)throw 0;ok();btn.textContent="Enviado, gracias"}catch(e){btn.textContent="No se pudo enviar. Llama al 958 12 34 56"}
+setTimeout(()=>{btn.disabled=false;btn.textContent=t},4000)}
+$("cf").addEventListener("submit",e=>{e.preventDefault();const f=e.target;
+send({_subject:"Nueva reserva de "+$("rn").value,Nombre:$("rn").value,Telefono:$("rt").value,Fecha:$("rd").value,Comensales:$("rp").value,Comentarios:$("rm").value},f.querySelector("button"),()=>f.reset())});
+$("send").addEventListener("click",()=>{const o=window.ORD;
+if(!o||!o.n){alert("Añade alguna hamburguesa a tu pedido.");return}
+if(!$("on").value||!$("ot").value||!$("oa").value){alert("Escribe tu nombre, teléfono y dirección o mesa.");return}
+send({_subject:"Nuevo pedido de "+$("on").value,Nombre:$("on").value,Telefono:$("ot").value,"Direccion o mesa":$("oa").value,Pedido:o.t,Total:o.tot},$("send"),()=>{for(const k in C)delete C[k];upd()})});
+addEventListener("scroll",()=>$("nav").classList.toggle("s",scrollY>40));
+document.querySelectorAll("img[data-f]").forEach(im=>{const x=["jpg","jpeg","png","webp","jfif"];let k=0;
+const t=()=>{if(k>=x.length){im.parentNode.remove();return}im.src=im.dataset.f+"."+x[k++]};im.onerror=t;t()});
+upd();
+</script>
+</body>
+</html>
