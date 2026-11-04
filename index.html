@@ -52,7 +52,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 <main>
 <!-- HERO -->
 <section id="inicio" class="ph min-h-screen flex items-end">
-  <img src="img/Wagyu%20Reserva.jfif" alt="Hamburguesa de autor de Nexus Burger House" onerror="this.remove()">
+  <img src="Wagyu%20Reserva.jfif" alt="Hamburguesa de autor de Nexus Burger House" onerror="this.remove()">
   <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(18,10,12,.92) 15%,rgba(18,10,12,.45) 70%,rgba(18,10,12,.2)),linear-gradient(0deg,var(--bg),transparent 35%)"></div>
   <div class="relative max-w-7xl mx-auto w-full px-5 lg:px-12 pb-24 pt-40 hero-in">
     <h1 class="text-5xl sm:text-7xl leading-[1.05] max-w-3xl">La hamburguesa, <span class="italic gold">con categoría.</span></h1>
@@ -66,9 +66,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 
 <!-- PROMESAS -->
 <section class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-3 gap-10 text-center">
-  <div><i class="fa-solid fa-award gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Ternera madurada 30 días</h3><p class="text-[var(--mute)]">Carne seleccionada, picada cada mañana y cocinada a tu punto.</p></div>
-  <div><i class="fa-solid fa-wheat-awn gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Brioche de horno propio</h3><p class="text-[var(--mute)]">Mantequilla y huevo de corral. Tierno por dentro, dorado por fuera.</p></div>
-  <div><i class="fa-solid fa-champagne-glasses gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Experiencia de lujo</h3><p class="text-[var(--mute)]">Servicio de mesa, vinos por copa y postres de autor.</p></div>
+  <div><div class="ph aspect-[4/3] mb-5"><img data-f="ternera" alt="Ternera madurada" loading="lazy"></div><i class="fa-solid fa-award gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Ternera madurada 30 días</h3><p class="text-[var(--mute)]">Carne seleccionada, picada cada mañana y cocinada a tu punto.</p></div>
+  <div><div class="ph aspect-[4/3] mb-5"><img data-f="brioche" alt="Pan brioche de horno propio" loading="lazy"></div><i class="fa-solid fa-wheat-awn gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Brioche de horno propio</h3><p class="text-[var(--mute)]">Mantequilla y huevo de corral. Tierno por dentro, dorado por fuera.</p></div>
+  <div><div class="ph aspect-[4/3] mb-5"><img data-f="lujo" alt="Experiencia de lujo en Nexus Burger House" loading="lazy"></div><i class="fa-solid fa-champagne-glasses gold text-2xl mb-3"></i><h3 class="text-xl mb-1">Experiencia de lujo</h3><p class="text-[var(--mute)]">Servicio de mesa, vinos por copa y postres de autor.</p></div>
 </section>
 <div class="line max-w-4xl mx-auto"></div>
 
@@ -104,7 +104,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   <div class="md:col-span-3">
     <h2 class="text-4xl sm:text-5xl">Jose Centeno Santaella</h2>
     <p class="gold italic serif text-xl mt-2">Fundador y propietario</p>
-    <p class="mt-6 text-[#d8cdbd]">Estudio informática en Granada y aplico a la cocina la misma disciplina: probar, medir y repetir hasta que cada receta sale perfecta. Nexus Burger House nace con una idea sencilla: que la mejor hamburguesa de la ciudad se sirva con el cuidado de un restaurante de alta cocina, sin precios de otro mundo.</p>
+    <p class="mt-6 text-[#d8cdbd]">Soy informático y estudio Administración de Sistemas Informáticos en Red. Nexus Burger House es mi forma de unir mis dos pasiones: la tecnología y la buena cocina. He digitalizado el restaurante de principio a fin para que cada hamburguesa salga con la misma precisión y cada cliente reciba un servicio impecable.</p>
+    <div class="grid sm:grid-cols-3 gap-6 mt-8">
+      <div><div class="ph aspect-[4/3] mb-4"><img data-f="robot-cocina" alt="Cocina robotizada" loading="lazy"></div><i class="fa-solid fa-robot gold text-xl mb-2"></i><h3 class="text-lg">Cocina robotizada</h3><p class="text-[var(--mute)] text-base">Robots programados por mí elaboran cada hamburguesa con la misma receta y el mismo punto, siempre.</p></div>
+      <div><div class="ph aspect-[4/3] mb-4"><img data-f="robot-servicio" alt="Servicio a mesa con robots" loading="lazy"></div><i class="fa-solid fa-bell-concierge gold text-xl mb-2"></i><h3 class="text-lg">Servicio con robots</h3><p class="text-[var(--mute)] text-base">Tu pedido llega a la mesa sin esperas ni errores.</p></div>
+      <div><div class="ph aspect-[4/3] mb-4"><img data-f="pago-online" alt="Pago online" loading="lazy"></div><i class="fa-solid fa-credit-card gold text-xl mb-2"></i><h3 class="text-lg">Pago online</h3><p class="text-[var(--mute)] text-base">Pagas desde el móvil, sin colas y sin esperar la cuenta.</p></div>
+    </div>
+    <p class="mt-8 text-[#d8cdbd]">Somos un equipo pequeño y cada persona hace lo que mejor sabe. Yo superviso, reviso y actualizo los robots y toda su mecanización. Otra persona recibe a los clientes, les indica su mesa y deja el salón perfecto, con las mesas y los cubiertos. Y otra se ocupa de que la vajilla esté impecable.</p>
     <a href="mailto:josecenteno1616@gmail.com" class="inline-block mt-6 gold hover:underline"><i class="fa-solid fa-envelope mr-2"></i>josecenteno1616@gmail.com</a>
   </div>
 </section>
@@ -159,12 +165,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 <script>
 const IMG=i=>encodeURI(i);
 const M=[
-{n:"Génesis",p:12.9,d:"Ternera madurada, cheddar curado, pepinillo y salsa de la casa.",i:"img/Génesis.jfif"},
-{n:"Wagyu Reserva",p:17.9,d:"Wagyu a la plancha, cebolla confitada y mayonesa ahumada.",i:"img/Wagyu Reserva.jfif"},
-{n:"Trufa Negra",p:15.9,d:"Ternera, crema de trufa negra, queso brie y rúcula.",i:"img/trufa.jpg.jfif"},
-{n:"Ibérica",p:14.9,d:"Ternera, jamón ibérico, tomate rallado y aceite de oliva virgen extra.",i:"img/iberica.jpg.jfif"},
-{n:"Alpujarra",p:14.5,d:"Ternera, queso de cabra gratinado, cebolla roja y mermelada de higos.",i:"img/Alpujarra.jfif"},
-{n:"Foie Royale",p:16.9,d:"Ternera, foie micuit, manzana caramelizada y reducción de Pedro Ximénez.",i:"img/Foie Royale.jfif"}];
+{n:"Génesis",p:12.9,d:"Ternera madurada, cheddar curado, pepinillo y salsa de la casa.",i:"Génesis.jfif"},
+{n:"Wagyu Reserva",p:17.9,d:"Wagyu a la plancha, cebolla confitada y mayonesa ahumada.",i:"Wagyu Reserva.jfif"},
+{n:"Trufa Negra",p:15.9,d:"Ternera, crema de trufa negra, queso brie y rúcula.",i:"trufa.jpg.jfif"},
+{n:"Ibérica",p:14.9,d:"Ternera, jamón ibérico, tomate rallado y aceite de oliva virgen extra.",i:"iberica.jpg.jfif"},
+{n:"Alpujarra",p:14.5,d:"Ternera, queso de cabra gratinado, cebolla roja y mermelada de higos.",i:"Alpujarra.jfif"},
+{n:"Foie Royale",p:16.9,d:"Ternera, foie micuit, manzana caramelizada y reducción de Pedro Ximénez.",i:"Foie Royale.jfif"}];
 const C={},$=id=>document.getElementById(id),eur=n=>n.toFixed(2).replace(".",",")+" €";
 $("menu").innerHTML=M.map((b,k)=>`<article class="dish"><div class="ph aspect-[4/3]"><img src="${IMG(b.i)}" alt="Hamburguesa ${b.n}" loading="lazy" onerror="this.remove()"></div>
 <div class="p-6"><div class="flex justify-between items-baseline gap-3"><h3 class="text-2xl">${b.n}</h3><span class="gold serif text-xl">${eur(b.p)}</span></div>
@@ -179,6 +185,8 @@ function upd(){
 function toggleCart(){const c=$("cart");c.classList.toggle("translate-x-full");c.classList.toggle("translate-x-0")}
 $("cf").addEventListener("submit",e=>{e.preventDefault();location.href="mailto:josecenteno1616@gmail.com?subject="+encodeURIComponent("Reserva de "+$("rn").value)+"&body="+encodeURIComponent(`Nombre: ${$("rn").value}\nTeléfono: ${$("rt").value}\nFecha: ${$("rd").value}\nComensales: ${$("rp").value}\n\n${$("rm").value}`)});
 addEventListener("scroll",()=>$("nav").classList.toggle("s",scrollY>40));
+document.querySelectorAll("img[data-f]").forEach(im=>{const x=["jpg","jpeg","png","webp","jfif"];let k=0;
+const t=()=>{if(k>=x.length){im.parentNode.remove();return}im.src=im.dataset.f+"."+x[k++]};im.onerror=t;t()});
 upd();
 </script>
 </body>
